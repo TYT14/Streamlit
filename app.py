@@ -5,4 +5,11 @@ st.title("My Dashboard")
 
 df = pd.read_csv('data.csv')
 
+if st.checkbox("affichage le jeu de donénes"):
+  st.write(df)
+
+pro = df.Profession.unique()
+
+st.selectbox('Selexctionner une profession', pro)
+
 st.write(df)
