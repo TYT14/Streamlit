@@ -28,6 +28,6 @@ if st.checkbox("Uploader un fichier svp") :
     fig, ax = plt.subplots()
     ax.hist(columns_selected, bins=20)
     
-    st.pyplots(fig)
+    st.pyplot(fig)
 
 
