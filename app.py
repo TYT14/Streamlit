@@ -22,8 +22,8 @@ if st.checkbox("Affichage le jeu de données"):
 # 1 Bouton upload .csv
 
 if st.checkbox("Uploader un fichier svp") :
-  st.file_uploader(label, type=None, accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
-
+ uploaded_file = st.file_uploader("Choose a file")
+  
 # 2 Selection d'un variable
 
 # 3 Affichage d'un graphique
