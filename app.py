@@ -23,13 +23,19 @@ if st.checkbox("Affichage le jeu de données"):
 
 if st.checkbox("Uploader un fichier svp") :
  uploaded_file = st.file_uploader("Choisir un fichier pour upload")
-  
-# 2 Selection d'un variable
+ if uploaded_file is not None:
+    # To read file as bytes:
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
 
-# 3 Affichage d'un graphique
+    # To convert to a string based IO:
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    st.write(stringio)
 
-# 4 
+    # To read file as string:
+    string_data = stringio.read()
+    st.write(string_data)
 
-
-
-
+    # Can be used wherever a "file-like" object is accepted:
+    dataframe = pd.read_csv(uploaded_file)
+    st.write(dataframe)
