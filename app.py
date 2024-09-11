@@ -31,3 +31,7 @@ if st.checkbox("Uploader un fichier svp") :
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file,sep=';')
     st.write(dataframe)
+
+# 2 selection d'une variable avec df.columns & st.selectbox
+st.selectbox("Selectionner un champ")
+
