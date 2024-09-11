@@ -4,6 +4,7 @@ import requests
 
 
 
+
 st.title("My Dashboard")
 
 
@@ -21,6 +22,10 @@ columns = dataframe.columns
 user_selection = st.selectbox('Selectionner une variable', columns)
 
 # 3 Affichage de la varable sous forme de graphique
-st.write(dataframe)
+columns_selected = dataframe[user_selection]
+fig, ax = plt.subplots()
+ax.hist(columns_selected, bins=20)
+
+st.pyplots(fig)
 
 
