@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
-import sqlalchemy as db
+
 
 st.title("My Dashboard")
 
