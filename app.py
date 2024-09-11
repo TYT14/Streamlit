@@ -19,7 +19,9 @@ if st.checkbox("Affichage le jeu de données"):
 
 # 1 Bouton upload .csv
 
-st.checkbox("Uploader un fichier svp")
+if st.checkbox("Uploader un fichier svp") : 
+  df = pd.read_csv(file.file,sep=';')
+  df.to_csv(file.filename)
 
 # 2 Selection d'un variable
 
