@@ -33,5 +33,5 @@ if st.checkbox("Uploader un fichier svp") :
     st.write(dataframe)
 
 # 2 selection d'une variable avec df.columns & st.selectbox
-st.selectbox("Selectionner un champ")
+user_selection = st.selectbox('Selectionner une profession', df.columns)
 
