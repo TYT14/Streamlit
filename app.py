@@ -1,4 +1,4 @@
-import Steamlit as st
+import Streamlit as st
 import pandas as pd
 
 st.title("My Dashboard")
